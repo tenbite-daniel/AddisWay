@@ -15,6 +15,10 @@ const leftBtn = document.querySelector(".carousel-container .fa-arrow-left");
 const rightBtn = document.querySelector(".carousel-container .fa-arrow-right");
 const cards = document.querySelectorAll(".carousel-card");
 
+// faq section
+const question = document.querySelectorAll(".faq-question");
+const answer = document.querySelectorAll(".faq-answer");
+
 // menu show when hum menu is clicked
 function showMenu() {
   menu.classList.add("show");
@@ -139,3 +143,19 @@ mission.addEventListener("click", showMission);
 // event listner for carousel
 rightBtn.addEventListener("click", moveRight);
 leftBtn.addEventListener("click", moveLeft);
+// event listner for faq
+question.forEach((quest) => {
+  quest.addEventListener("click", () => {
+    const currentAnswer = quest.nextElementSibling;
+    answer.forEach((ans) => {
+      if (ans !== currentAnswer) {
+        ans.style.display = "none";
+      }
+    });
+    if (currentAnswer.style.display === "block") {
+      currentAnswer.style.display = "none";
+    } else {
+      currentAnswer.style.display = "block";
+    }
+  });
+});

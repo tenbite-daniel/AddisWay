@@ -225,8 +225,9 @@ h2 {
   margin-top: 20px;
 }
 #chatbot h2 {
-  width: 80%;
-  margin: auto;
+  /* width: 80%; */
+  max-width: 650px;
+  margin: -20px -20px 0 -20px;
   background: linear-gradient(to right, #1ba248, #719727, #9e6308);
   border-radius: 10px 10px 0 0;
 }
@@ -292,25 +293,53 @@ h2 {
 #chat-input button:hover {
   background: #16a34a;
 }
-
-/* messages */
-#contact {
-  width: 100%;
+/* faqs */
+.faq-section {
+  width: 80%;
   margin: auto;
 }
-.contact-form {
+.faq-item {
+  background: rgb(185, 182, 182);
+  margin-top: 10px;
+  padding: 10px;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+}
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+}
+/* messages */
+#contact {
   width: 80%;
-  margin-left: auto;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.contact-form {
+  padding: 50px;
   margin-top: 20px;
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+.contact-form h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
 }
 .contact-form label,
 .contact-form input,
-.contact-form button {
+.contact-form button,
+.contact-form textarea {
   display: block;
   margin-top: 10px;
 }
 .contact-form input {
   width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
 }
 .contact-form textarea {
   width: 250px;
@@ -325,8 +354,10 @@ h2 {
 }
 /* footer */
 footer {
-  margin-top: 20px;
   background: #1e293b;
+}
+.footer-links {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -353,8 +384,10 @@ footer a {
 .counter {
   margin-bottom: 10px;
 }
-footer > p {
-  margin-bottom: 10px;
+.copyright {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #fff;
 }
 @media (min-width: 760px) {
   .logo-bars .fa-bars {
@@ -424,7 +457,15 @@ footer > p {
     align-items: center;
     gap: 30px;
   }
-  footer {
+  /* messages */
+  #contact {
+    width: 40%;
+  }
+  .contact-form {
+    padding-left: 100px;
+  }
+  /* footer */
+  .footer-links {
     flex-direction: row;
     gap: 50px;
   }
