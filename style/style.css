@@ -26,9 +26,17 @@ header .fa-x {
 .menu {
   display: none;
 }
+
 .nav .show {
   display: block;
   width: 100%;
+  position: absolute;
+  top: 49px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+  text-align: center;
   text-align: center;
 }
 .nav .menu li {
@@ -40,7 +48,7 @@ header .fa-x {
   text-decoration: none;
   color: grey;
 }
-.nav .menu li button {
+.cta {
   width: 150px;
   padding: 7px;
   font-size: 1.2rem;
@@ -48,6 +56,23 @@ header .fa-x {
   background: #15803d;
   border: none;
   border-radius: 20px;
+}
+.hero {
+  text-align: center;
+  color: #fff;
+}
+.hero-image {
+  width: 100%;
+}
+.hero h1 {
+  margin-top: -50%;
+  font-size: 2rem;
+}
+.hero p {
+  font-size: 1.3rem;
+}
+.hero .cta {
+  margin-top: 10px;
 }
 
 @media (min-width: 760px) {
@@ -64,5 +89,20 @@ header .fa-x {
     align-items: center;
     gap: 50px;
     margin-right: 25px;
+  }
+  .hero-image {
+    height: 100vh;
+    object-fit: fill;
+  }
+  .hero h1 {
+    margin-top: -400px;
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.6rem;
+  }
+  .hero .cta {
+    width: 200px;
+    font-size: 1.5rem;
   }
 }
