@@ -58,14 +58,20 @@ header .fa-x {
   border-radius: 20px;
 }
 .hero {
-  text-align: center;
+  width: 100%;
   color: #fff;
+  text-align: center;
+  position: relative;
 }
 .hero-image {
   width: 100%;
 }
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
 .hero h1 {
-  margin-top: -50%;
   font-size: 2rem;
 }
 .hero p {
@@ -74,7 +80,70 @@ header .fa-x {
 .hero .cta {
   margin-top: 10px;
 }
-
+/* about section */
+#about h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+.about-image {
+  width: 100%;
+  margin-top: 20px;
+}
+.story p {
+  width: 90%;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  font-size: 1.1rem;
+}
+.mission-vision {
+  text-align: center;
+  margin-top: 20px;
+}
+.mission-vision button {
+  border: none;
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.mission {
+  text-decoration: underline;
+}
+.vision-text {
+  display: none;
+}
+.values {
+  text-align: center;
+  margin-top: 20px;
+}
+.values h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.value-list {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.value-list button {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.value1 {
+  background: #16a34a;
+}
+.value2 {
+  background: #ca8a04;
+}
+.value3 {
+  background: #1e293b;
+}
 @media (min-width: 760px) {
   .logo-bars .fa-bars {
     display: none;
@@ -94,8 +163,11 @@ header .fa-x {
     height: 100vh;
     object-fit: fill;
   }
+  .hero-text {
+    top: 40%;
+    left: 33%;
+  }
   .hero h1 {
-    margin-top: -400px;
     font-size: 3rem;
   }
   .hero p {
@@ -104,5 +176,23 @@ header .fa-x {
   .hero .cta {
     width: 200px;
     font-size: 1.5rem;
+  }
+  /* about */
+  .our-story {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .about-image {
+    width: 30%;
+  }
+  .our-story p {
+    text-align: left;
+  }
+  .mission-vision {
+    width: 70%;
+    margin: auto;
   }
 }
