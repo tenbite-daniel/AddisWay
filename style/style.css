@@ -6,6 +6,13 @@
 
 header {
   width: 100%;
+  position: fixed;
+  z-index: 100;
+  background: #fff;
+}
+header h1 a {
+  text-decoration: none;
+  color: #15803d;
 }
 
 .logo-bars {
